@@ -10,9 +10,11 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+    <script src="https://raw.githubusercontent.com/Boggin/angular-level-meter/master/level-meter.js"></script>
+    <link href=".https://raw.githubusercontent.com/Boggin/angular-level-meter/master/level-meter.css" rel="stylesheet" />
     <title>angular-level-meter by Boggin</title>
   </head>
-
   <body>
     <div id="container">
       <div class="inner">
@@ -26,9 +28,12 @@
         <hr>
         <section id="main_content">
           <h3>
-            <a name="angular-level-meter" class="anchor" href="#angular-level-meter"><span class="octicon octicon-link"></span></a>angular-level-meter.
-          </h3>
+            <a name="angular-level-meter" class="anchor" href="#angular-level-meter"><span class="octicon octicon-link"></span></a>angular-level-meter</h3>
           <p>Here are the examples of the level meter AngularJS Directive. It uses SVG to create these little level meters that look like the power level meters from my 1980's cassette machine.</p>
+          <level-meter level="0"></level-meter><br/>
+          <level-meter level="1"></level-meter><br/>
+          <level-meter level="3"></level-meter><br/>
+          <level-meter level="5"></level-meter>
           <h3>
             <a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
             <p><a href="https://github.com/boggin" class="user-mention">@boggin</a> Richard Bogle</p>
