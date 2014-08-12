@@ -1,0 +1,31 @@
+{
+  "name": "angular-level-meter",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Boggin/angular-level-meter",
+  "authors": [
+    "Richard Bogle <richard.bogle@unsettling.co.uk>"
+  ],
+  "description": "A level meter AngularJS Directive.",
+  "main": "level-meter.js",
+  "keywords": [
+    "angularjs",
+    "directive",
+    "level-meter",
+    "svg"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "bower.json",
+    "package.json",
+    "Gruntfile.js",
+    "level-meter.html"
+  ],
+  "dependencies": {
+    "angular": ">=1.2.19"
+  }
+}
