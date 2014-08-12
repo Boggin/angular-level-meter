@@ -1,7 +1,7 @@
 {
   "name": "angular-level-meter",
   "version": "0.0.0",
-  "description": "An AngularJS Directive to create level meter images.",
+  "description": "An AngularJS Directive to create level meters.",
   "main": "level-meter.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

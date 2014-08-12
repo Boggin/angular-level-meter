@@ -6,19 +6,19 @@ var meter = angular.module('level-meter', [])
       scope: {
         level: '='
       },
-      templateUrl: 'level-meter',
+      templateUrl: './level-meter-template.html',
       link: function (scope, element, attrs) {
         scope.high = 
         scope.med  = 
-        scope.low  = "level-meter__bar-empty";
+        scope.low  = "bar-empty";
         if (scope.level >= 1) {
-          scope.low = "level-meter__bar-low";
+          scope.low = "bar-low";
         }
         if (scope.level >= 3) {
-          scope.med = "level-meter__bar-med";
+          scope.med = "bar-med";
         }
         if (scope.level >= 5) {
-          scope.high = "level-meter__bar-high";
+          scope.high = "bar-high";
         }
       }
     };
