@@ -1,0 +1,23 @@
+.level-meter {
+  background: #fff;
+}
+.level-meter.box {
+  fill: none;
+  stroke: #7d7d7d;
+}
+.level-meter.bar-empty {
+   fill: #7d7d7d;
+   stroke: #7d7d7d;
+}
+.level-meter.bar-low {
+  fill: #f06a00;
+  stroke: #f06a00;
+}
+.level-meter.bar-med {
+  fill: #3fa6cc;
+  stroke: #3fa6cc;
+}
+.level-meter.bar-high {
+   fill: #6dc040;
+   stroke: #6ec040;
+}
