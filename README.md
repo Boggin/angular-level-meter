@@ -3,7 +3,7 @@ angular-level-meter
 
 A level meter AngularJS Directive.
 
-It is reminiscent of an 80's tape deck or cassette machine power level meters and is useful for simple dashboards.
+It's reminiscent of an 80's tape deck's power level meters and is useful for simple dashboards.
 
 ![Level Meter examples](https://raw.githubusercontent.com/Boggin/angular-level-meter/gh-pages/images/level-meter.png "Level Meters")
 
