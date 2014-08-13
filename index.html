@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="level-meter">
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -11,11 +11,11 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
-    <script src="http://raw.githubusercontent.com/Boggin/angular-level-meter/master/level-meter.js"></script>
-    <link href="http://raw.githubusercontent.com/Boggin/angular-level-meter/master/level-meter.css" rel="stylesheet" />
-    <title>angular-level-meter by Boggin</title>
+    <script src="http://raw.githubusercontent.com/Boggin/angular-level-meter/master/angular-level-meter.min.js"></script>
+    <link href="http://raw.githubusercontent.com/Boggin/angular-level-meter/master/src/angular-level-meter.css" rel="stylesheet" />
+    <title>angular-level-meter</title>
   </head>
-  <body>
+  <body ng-controller="exampleCtrl">
     <div id="container">
       <div class="inner">
         <header>
@@ -44,5 +44,9 @@
         </footer>
       </div>
     </div>
+    <script>
+      var app = angular.module('level-meter', ['angular-level-meter']);
+      app.controller('exampleCtrl', function ($scope) { });
+    </script>
   </body>
 </html>
