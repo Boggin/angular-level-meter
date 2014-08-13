@@ -10,9 +10,6 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
-    <script src="http://raw.githubusercontent.com/Boggin/angular-level-meter/master/angular-level-meter.min.js"></script>
-    <link href="http://raw.githubusercontent.com/Boggin/angular-level-meter/master/src/angular-level-meter.css" rel="stylesheet" />
     <title>angular-level-meter</title>
   </head>
   <body ng-controller="exampleCtrl">
@@ -44,6 +41,9 @@
         </footer>
       </div>
     </div>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+    <script src="angular-level-meter.min.js"></script>
+    <link href="angular-level-meter.css" rel="stylesheet" />
     <script>
       var app = angular.module('level-meter', ['angular-level-meter']);
       app.controller('exampleCtrl', function ($scope) { });
