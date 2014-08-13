@@ -6,7 +6,7 @@ var meter = angular.module('level-meter', [])
       scope: {
         level: '='
       },
-      templateUrl: './level-meter-template.html',
+      templateUrl: '/angular-level-meter-template.html',
       link: function (scope, element, attrs) {
         scope.high = 
         scope.med  = 
