@@ -1,24 +1,22 @@
 /*global module:false*/
 module.exports = function(grunt) {
 
-  // Project configuration.
   grunt.initConfig({
-    // Metadata.
     pkg: grunt.file.readJSON('package.json'),
     banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' +
       '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
       '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
       '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
       ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
-    // Task configuration.
+
     concat: {
       options: {
         banner: '<%= banner %>',
         stripBanners: true
       },
       dist: {
-        src: ['lib/<%= pkg.name %>.js'],
-        dest: 'dist/<%= pkg.name %>.js'
+        src: ['tmp/*-templates.js', 'src/*.js'],
+        dest: 'tmp/<%= pkg.name %>.js'
       }
     },
     uglify: {
@@ -26,11 +24,12 @@ module.exports = function(grunt) {
         banner: '<%= banner %>'
       },
       dist: {
-        src: '<%= concat.dist.dest %>',
-        dest: 'dist/<%= pkg.name %>.min.js'
+        src: ['tmp/<%= pkg.name %>.js'],
+        dest: '<%= pkg.name %>.min.js'
       }
     },
     jshint: {
+      files: ['src/<%= pkg.name %>.js'],
       options: {
         curly: true,
         eqeqeq: true,
@@ -49,34 +48,41 @@ module.exports = function(grunt) {
       },
       gruntfile: {
         src: 'Gruntfile.js'
-      },
-      lib_test: {
-        src: ['lib/**/*.js', 'test/**/*.js']
       }
-    },
-    nodeunit: {
-      files: ['test/**/*_test.js']
     },
     watch: {
       gruntfile: {
         files: '<%= jshint.gruntfile.src %>',
         tasks: ['jshint:gruntfile']
-      },
-      lib_test: {
-        files: '<%= jshint.lib_test.src %>',
-        tasks: ['jshint:lib_test', 'nodeunit']
       }
-    }
+    },
+    html2js: {
+      options: {
+        htmlmin: {
+          collapseBooleanAttributes: true,
+          collapseWhitespace: true,
+          removeAttributeQuotes: true,
+          removeComments: true,
+          removeEmptyAttributes: true,
+          removeRedundantAttributes: true,
+          removeScriptTypeAttributes: true,
+          removeStyleLinkTypeAttributes: true
+        }
+      },
+      app: {
+        src: 'src/<%= pkg.name %>.tpl.html',
+        dest: 'tmp/<%= pkg.name %>-templates.js'
+      },
+    },
   });
 
-  // These plugins provide necessary tasks.
-  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-nodeunit');
+  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-html2js');
 
-  // Default task.
-  grunt.registerTask('default', ['jshint', 'nodeunit', 'concat', 'uglify']);
+  grunt.registerTask('default', ['jshint']);
+  grunt.registerTask('build', ['html2js', 'concat', 'uglify']);
 
 };
