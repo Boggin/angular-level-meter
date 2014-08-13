@@ -23,7 +23,8 @@
     "bower.json",
     "package.json",
     "Gruntfile.js",
-    "example"
+    "example",
+    "src"
   ],
   "dependencies": {
     "angular": ">=1.2.19"
