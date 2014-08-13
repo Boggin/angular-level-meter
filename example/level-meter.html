@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html ng-app="level-meter">
 <head>
-  <script src="../bower_compnents/angular/angular.min.js"></script>
-  <script src="../angular-level-meter.min.js"></script>
   <link href="../src/angular-level-meter.css" rel="stylesheet" />
 </head>
-<body>
+<body ng-controller="exampleCtrl">
   <level-meter level="1"></level-meter><br/>
   <level-meter level="3"></level-meter><br/>
   <level-meter level="5"></level-meter>
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="../angular-level-meter.min.js"></script>
+  <script>
+    var app = angular.module('level-meter', ['angular-level-meter']);
+    app.controller('exampleCtrl', function ($scope) { });
+  </script>
 </body>
 </html>
