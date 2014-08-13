@@ -74,15 +74,19 @@ module.exports = function(grunt) {
         dest: 'tmp/<%= pkg.name %>-templates.js'
       },
     },
+    clean: {
+      build: ['tmp/*.*'],
+    },
   });
 
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-html2js');
 
   grunt.registerTask('default', ['jshint']);
-  grunt.registerTask('build', ['html2js', 'concat', 'uglify']);
+  grunt.registerTask('build', ['clean', 'html2js', 'concat', 'uglify']);
 
 };
