@@ -23,7 +23,7 @@
     "bower.json",
     "package.json",
     "Gruntfile.js",
-    "level-meter.html"
+    "example"
   ],
   "dependencies": {
     "angular": ">=1.2.19"
