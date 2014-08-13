@@ -6,7 +6,7 @@
     "Richard Bogle <richard.bogle@unsettling.co.uk>"
   ],
   "description": "A level meter AngularJS Directive.",
-  "main": "level-meter.js",
+  "main": "angular-level-meter.min.js",
   "keywords": [
     "angularjs",
     "directive",

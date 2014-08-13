@@ -1,10 +1,8 @@
-(function (angular) {
+  angular.module('angular-level-meter', ['templates-app'])
 
-  'use strict';
+  .directive('levelMeter', function() {
+    'use strict';
 
-  var app = angular.module('angular-level-meter', ['templates-app']);
-
-  app.directive('levelMeter', function() {
     return {
       restrict: 'EA',
       replace: true,
@@ -29,4 +27,3 @@
     };
   });
 
-})(window.angular);
